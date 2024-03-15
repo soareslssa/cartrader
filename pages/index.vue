@@ -4,9 +4,12 @@
       <span class="text-h4 text-center text-white">Find your drive</span>
       <v-text-field
         class="responsive-text-field pa-4"
-        label="find something..."
         variant="solo"
-      ></v-text-field>
+      >
+        <template v-slot:append-inner>
+          <v-btn variant="plain">Search</v-btn>
+        </template>
+      </v-text-field>
     </div>
   </div>
 </template>
