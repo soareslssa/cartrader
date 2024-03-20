@@ -1,33 +1,39 @@
-<template>
-  <div class="d-flex align-center pa-6 body">
-    <div class="d-flex flex-column w-100 mb-16 align-center">
-      <span class="text-h4 text-center text-white">Find your drive</span>
-      <v-text-field
-        class="responsive-text-field pa-4"
-        variant="solo"
-      >
-        <template v-slot:append-inner>
-          <v-btn variant="plain">Search</v-btn>
-        </template>
-      </v-text-field>
-    </div>
-  </div>
-</template>
 <script setup>
 </script>
-<style scoped>
-.body {
-  background-image: url("https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  height: 100vh;
-}
-.responsive-text-field {
-  width: 100vw;
-}
+<template>
+  <div>
+  <!-- NAVBAR -->
+  <header
+    class="sticky top-0 z-50 flex justify-between items-center space-x-1 border-b bg-white p-4 shadow-md"
+  >
+    <a class="text-3xl font-mono" href="">cartrader</a>
+  </header>
+  <!-- NAVBAR -->
 
-@media (min-width: 768px) {
-  .responsive-text-field {
-    width: 50vw;
-  }
-}
-</style>
+  <!-- HOME HERO -->
+  <div
+    class="relative h-screen w-100 bg-no-repeat bg-cover bg-bottom bg-[url('https://carconfigurator.ferrari.com/assets/cars/portofinom/packages/default/car-ferrari-portofino-m_splash.jpg')]"
+  >
+    <div class="z-10 absolute w-full h-full flex justify-center items-center">
+      <div class="text-center w-1/2">
+        <h1 class="text-8xl font-serif mb-10 text-white">Find your drive</h1>
+        <!-- HOME SEARCH BAR -->
+        <div
+          class="font-serif w-[1000px] text-2xl rounded-full bg-white flex justify-between overflow-hidden drop-shadow-2xl mx-auto"
+        >
+          <input
+            type="text"
+            class="py-3 px-5 w-full text-2xl rounded-full focus:outline-none"
+            placeholder="Search by city..."
+          />
+          <button class="bg-sky-500 px-10 text-white">Search</button>
+        </div>
+        <!-- HOME SEARCH BAR -->
+      </div>
+    </div>
+    <div class="z-1 absolute w-full h-full bg-black opacity-50"></div>
+  </div>
+
+  <!-- HOME HERO -->
+</div>
+</template>
