@@ -16,7 +16,7 @@ const handleSearch = () => {
   >
     <input
       type="text"
-      class="py-3 px-5 w-full text-2xl rounded-full focus:outline-none"
+      class="py-3 px-5 w-full border-4 border-red-500 text-2xl rounded-full focus:outline-none"
       placeholder="Search by city..."
       :class="cityError ? 'border-2 border-red-500': ''"
       v-model="city"
@@ -24,5 +24,6 @@ const handleSearch = () => {
     <button class="bg-sky-500 px-10 text-white" @click="handleSearch">
       Search
     </button>
+    <v-snackbar v-model="cityError" color="warning">Campo necessário</v-snackbar>
   </div>
 </template>
