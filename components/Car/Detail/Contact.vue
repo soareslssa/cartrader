@@ -1,15 +1,35 @@
+<script lang="ts" setup>
+const { required, email } = useRules();
+</script>
 <template>
-        <div class="mt-10">
-      <div class="flex w-[600px] justify-between">
-        <input type="text" class="border p-1" placeholder="Name" />
-        <input type="text" class="border p-1" placeholder="Email" />
-        <input type="text" class="border p-1" placeholder="Phone" />
+  <div class="mt-10">
+    <div class="flex flex-col w-100 sm:w-50 justify-between">
+      <v-text-field
+        label="Name"
+        :rules="[required]"
+        variant="outlined"
+      ></v-text-field>
+      <v-text-field
+        label="Email"
+        :rules="[required, email]"
+        variant="outlined"
+      ></v-text-field>
+      <v-text-field
+        label="Phone"
+        :rules="[required]"
+        variant="outlined"
+      ></v-text-field>
+     <v-textarea
+          label="Message"
+          row-height="25"
+          rows="3"
+          variant="outlined"
+          auto-grow
+          shaped
+        ></v-textarea>
+      <div>
+        <v-btn color="primary">Submit</v-btn>
       </div>
-      <div class="flex mt-4 w-[600px]">
-        <textarea class="border p-1 w-full" placeholder="Message"></textarea>
-      </div>
-      <button class="bg-blue-400 text-white px-10 py-3 rounded mt-4">
-        Submit
-      </button>
     </div>
+  </div>
 </template>
