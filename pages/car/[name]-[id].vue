@@ -1,6 +1,6 @@
 <script setup>
 const route = useRoute();
-const { toTitleCase } = useString();
+const { toTitleCase } = useUtilities();
 
 useHead({
   title: `${toTitleCase(route.params.name)}`,
