@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 const route = useRoute();
+const { cars } = useCars();
 const { toTitleCase } = useUtilities();
 
-const props = defineProps({
-  car: Object,
+const car = computed(() => {
+  return cars.find((c) => {
+    return c.id === parseInt(route.params.id);
+  });
 });
-
 useHead({
   title: `${toTitleCase(route.params.name)}`,
 });
@@ -15,11 +17,10 @@ definePageMeta({
 });
 </script>
 <template>
-  <div>
-    <CarDetailHero />
+  <div v-if="car">
+    <CarDetailHero :car="car" />
+    <CarDetailAttributes :features="car.features" />
+    <CarDetailDescription :description="car.description" />
+    <CarDetailContact />
   </div>
-
-  <CarDetailAttributes />
-
-  <CarDetailDescription />
 </template>

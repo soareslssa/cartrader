@@ -1,8 +1,17 @@
+<script setup lang="ts">
+const props = defineProps({
+  features: Array,
+});
+</script>
 <template>
-  <div class="mr-10 mt-5 border-b pb-5">
-    <div class="flex text-lg mt-2">
-      <p class="rounded text-lime-800 mr-3">✔</p>
-      <p>Leather Interior</p>
-    </div>
+  <div class="pa-2 border-b">
+    <v-chip
+      v-for="(feature, index) in features"
+      :key="index"
+      class="ma-2"
+      color="primary"
+    >
+      {{ feature }}
+    </v-chip>
   </div>
 </template>
