@@ -5,7 +5,7 @@
   >
     <div class="z-10 absolute w-full h-full flex justify-center items-center">
       <div class="text-center w-100">
-        <h1 class="sm:text-8xl text-4xl font-serif mb-10 text-white">
+        <h1 class="sm:text-8xl text-4xl font-serif sm:mb-10 mb-5 text-white">
           Find your drive
         </h1>
         <CarSearchBar />
