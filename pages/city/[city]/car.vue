@@ -13,7 +13,7 @@ definePageMeta({
 })
 </script>
 <template>
-  <div class="mt-32 flex">
+  <div class="mt-10 flex flex-col md:flex-row gap-6">
     <CarSideBar />
     <NuxtPage />
   </div>
