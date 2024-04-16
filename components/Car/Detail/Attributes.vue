@@ -4,14 +4,9 @@ const props = defineProps({
 });
 </script>
 <template>
-  <div class="pa-2 border-b">
-    <v-chip
-      v-for="(feature, index) in features"
-      :key="index"
-      class="ma-2"
-      color="primary"
-    >
+  <div class="py-2 border-b">
+    <UBadge v-for="(feature, index) in features" :key="index" variant="subtle" class="rounded-full">
       {{ feature }}
-    </v-chip>
+    </UBadge>
   </div>
 </template>

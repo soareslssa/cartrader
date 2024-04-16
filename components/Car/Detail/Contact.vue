@@ -3,32 +3,34 @@ const { required, email } = useRules();
 </script>
 <template>
   <div class="mt-10">
-    <div class="flex flex-col w-100 sm:w-50 justify-between">
-      <v-text-field
-        label="Name"
-        :rules="[required]"
-        variant="outlined"
-      ></v-text-field>
-      <v-text-field
-        label="Email"
-        :rules="[required, email]"
-        variant="outlined"
-      ></v-text-field>
-      <v-text-field
-        label="Phone"
-        :rules="[required]"
-        variant="outlined"
-      ></v-text-field>
-     <v-textarea
-          label="Message"
-          row-height="25"
-          rows="3"
-          variant="outlined"
-          auto-grow
-          shaped
-        ></v-textarea>
+    <div class="flex flex-col w-full gap-2 justify-between">
+      <UInput
+        color="primary"
+        size="xl"
+        required
+        variant="outline"
+        placeholder="Name..."
+      />
+      <UInput
+        color="primary"
+        size="xl"
+        required
+        variant="outline"
+        type="email"
+        placeholder="Email..."
+      />
+      <UInput
+        color="primary"
+        size="xl"
+        required
+        variant="outline"
+        type="phone"
+        placeholder="Phone..."
+      />
+
+      <UTextarea v-model="value" />
       <div>
-        <v-btn color="primary">Submit</v-btn>
+        <UButton size="xl" block>Submit</UButton>
       </div>
     </div>
   </div>
