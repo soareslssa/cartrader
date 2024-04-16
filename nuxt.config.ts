@@ -8,15 +8,8 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   modules: [
-    'vuetify-nuxt-module',
+    '@nuxt/ui',
+    '@nuxt/image',
     '@nuxtjs/tailwindcss'
   ],
-  vuetify: {
-    moduleOptions: {
-      /* module specific options */
-    },
-    vuetifyOptions: {
-      /* vuetify options */
-    }
-  }
 })
