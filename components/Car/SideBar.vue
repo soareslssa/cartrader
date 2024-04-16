@@ -15,11 +15,13 @@ const city = ref("");
 
 const onChangeLocation = () => {
   if (!city.value) return;
-  if(!isNaN(parseInt(city.value))) {}
-  throw createError({
-    statusCode: 400,
-    message: "Invalid city format"
-  })
+  if (!isNaN(parseInt(city.value))) {
+    throw createError({
+      statusCode: 400,
+      message: "Invalid city format",
+    });
+  }
+
   updateModal("location");
   navigateTo(`/city/${city.value}/car/${route.params.make}`);
   city.value = "";
@@ -33,7 +35,7 @@ const onChangeLocation = () => {
     </div>
     <div
       v-if="modal.location"
-      class="flex flex-col  bg-white  shadow  p-5 bg-white"
+      class="flex flex-col bg-white shadow p-5 bg-white"
     >
       <input
         v-model="city"

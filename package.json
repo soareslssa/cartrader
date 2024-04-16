@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify-json/material-symbols": "^1.1.78",
     "@nuxt/image": "^1.5.0",
     "@nuxt/ui": "^2.15.2",
     "nuxt": "^3.10.3",

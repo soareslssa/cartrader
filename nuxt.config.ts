@@ -6,6 +6,9 @@ export default defineNuxtConfig({
       title: "Cartrader"
     }
   },
+  ui: {
+    icons: ['material-symbols']
+  },
   devtools: { enabled: true },
   modules: [
     '@nuxt/ui',
