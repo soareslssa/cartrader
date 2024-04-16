@@ -29,7 +29,7 @@ const onChangeLocation = () => {
 </script>
 <template>
   <div class="shadow border w-full md:w-[30dvw] h-full">
-    <div class="p-5 flex justify-between relative cursor-pointer border-b">
+    <div class="md:w-[250px] p-5 flex justify-between relative cursor-pointer border-b">
       <h3 @click="updateModal('location')">Location</h3>
       <h3 class="text-blue-400 capitalize truncate">{{ route.params.city }}</h3>
     </div>
